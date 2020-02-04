@@ -1,0 +1,39 @@
+<html>
+<body>
+<div>
+    <form method="post">
+        <input type="number" name="id" placeholder="input id">
+        <input type="text" name="name" placeholder="input name">
+        <input type="text" name="flyBehavior" placeholder="input fly">
+        <input type="text" name="quackBehavior" placeholder="input quack">
+        <input type="number" name="frog_id" placeholder="input id">
+        <input type="text" name="frogName" placeholder="input name">
+        <button type="submit">ADD</button>
+    </form>
+</div>
+
+<div>
+    <form method="post" action="delete">
+        <input type="number" name="id" placeholder="input id">
+        <button type="submit">delete</button>
+    </form>
+</div>
+
+<div>
+    <form method="post" action="find">
+        <input type="number" name="id" placeholder="input id">
+        <button type="submit">findById</button>
+    </form>
+</div>
+
+<div>Имя утки, полет, кряк, имя лягушки</div>
+{{#ducks}}
+<b>{{id}}</b>
+<b>{{name}}</b>
+<b>{{flyBehavior}}</b>
+<b>{{quackBehavior}}</b>
+<b>{{frogJpa.name}}</b>
+<br/>
+{{/ducks}}
+</body>
+</html>
